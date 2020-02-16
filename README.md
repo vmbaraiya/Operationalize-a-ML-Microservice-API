@@ -1,7 +1,15 @@
 [![CircleCI](https://circleci.com/gh/vmbaraiya/Operationalize-a-ML-Microservice-API.svg?style=svg)](https://circleci.com/gh/vmbaraiya/Operationalize-a-ML-Microservice-API)   [![CircleCI](https://circleci.com/gh/vmbaraiya/Operationalize-a-ML-Microservice-API.svg?style=shield)](https://circleci.com/gh/vmbaraiya/Operationalize-a-ML-Microservice-API)
 
+<p align="center">
+    <h1 align="center">Scoop</h1>
+</p>
+<p align="center">
+<b>Project Overview</a></b>
+|
+<b><a href="https://github.com/lukesampson/scoop#installation">Installation</a></b>
+|
+<b><a href="https://github.com/lukesampson/scoop/wiki">Documentation</a></b>
 
-## Project Overview
 
 In this project, you will apply the skills you have acquired in this course to operationalize a Machine Learning Microservice API. 
 
