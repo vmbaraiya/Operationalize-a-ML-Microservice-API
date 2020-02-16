@@ -1,0 +1,93 @@
+########### POD NAME and STATUS  ##########
+(.devops) [ec2-user@ip-172-31-88-57 project-ml-microservice-kubernetes]$ sudo kubectl get pods
+NAME                                  READY   STATUS    RESTARTS   AGE
+k8s-houseprice-app-77c6b579d9-dnjhl   1/1     Running   0          44m
+
+################# Port Forwarding and Handling Connection text ##########################
+(.devops) [ec2-user@ip-172-31-88-57 project-ml-microservice-kubernetes]$ sudo kubectl port-forward deployment/k8s-houseprice-app 8000:80
+Forwarding from 127.0.0.1:8000 -> 80
+Forwarding from [::1]:8000 -> 80
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+
+
+########################## POD LOGS #################################
+
+ * Debugger is active!
+ * Debugger PIN: 231-779-307
+[2020-02-16 12:39:13,474] INFO in app: JSON payload:
+ {'CHAS': {'0': 0}, 'RM': {'0': 6.575}, 'TAX': {'0': 296.0}, 'PTRATIO': {'0': 15.3}, 'B': {'0': 396.9}, 'LSTAT': {'0': 4.98}}
+[2020-02-16 12:39:13,476] INFO in app: Inference payload DataFrame:
+    CHAS     RM    TAX  PTRATIO      B  LSTAT
+0     0  6.575  296.0     15.3  396.9   4.98
+[2020-02-16 12:39:13,485] INFO in app: Scaling Payload :
+    CHAS     RM    TAX  PTRATIO      B  LSTAT
+0     0  6.575  296.0     15.3  396.9   4.98
+[2020-02-16 12:39:13,497] INFO in app: Housing Price Prediction output:
+ [20.35373177134412]
+127.0.0.1 - - [16/Feb/2020 12:39:13] "POST /predict HTTP/1.1" 200 -
+[2020-02-16 12:39:33,520] INFO in app: JSON payload:
+ {'CHAS': {'0': 0}, 'RM': {'0': 6.575}, 'TAX': {'0': 296.0}, 'PTRATIO': {'0': 15.3}, 'B': {'0': 396.9}, 'LSTAT': {'0': 4.98}}
+[2020-02-16 12:39:33,521] INFO in app: Inference payload DataFrame:
+    CHAS     RM    TAX  PTRATIO      B  LSTAT
+0     0  6.575  296.0     15.3  396.9   4.98
+[2020-02-16 12:39:33,530] INFO in app: Scaling Payload :
+    CHAS     RM    TAX  PTRATIO      B  LSTAT
+0     0  6.575  296.0     15.3  396.9   4.98
+[2020-02-16 12:39:33,541] INFO in app: Housing Price Prediction output:
+ [20.35373177134412]
+127.0.0.1 - - [16/Feb/2020 12:39:33] "POST /predict HTTP/1.1" 200 -
+[2020-02-16 12:39:53,419] INFO in app: JSON payload:
+ {'CHAS': {'0': 0}, 'RM': {'0': 6.575}, 'TAX': {'0': 296.0}, 'PTRATIO': {'0': 15.3}, 'B': {'0': 396.9}, 'LSTAT': {'0': 4.98}}
+[2020-02-16 12:39:53,420] INFO in app: Inference payload DataFrame:
+    CHAS     RM    TAX  PTRATIO      B  LSTAT
+0     0  6.575  296.0     15.3  396.9   4.98
+[2020-02-16 12:39:53,429] INFO in app: Scaling Payload :
+    CHAS     RM    TAX  PTRATIO      B  LSTAT
+0     0  6.575  296.0     15.3  396.9   4.98
+[2020-02-16 12:39:53,439] INFO in app: Housing Price Prediction output:
+ [20.35373177134412]
+127.0.0.1 - - [16/Feb/2020 12:39:53] "POST /predict HTTP/1.1" 200 -
+[2020-02-16 12:59:57,179] INFO in app: JSON payload:
+ {'CHAS': {'0': 0}, 'RM': {'0': 6.575}, 'TAX': {'0': 296.0}, 'PTRATIO': {'0': 15.3}, 'B': {'0': 396.9}, 'LSTAT': {'0': 4.98}}
+[2020-02-16 12:59:57,180] INFO in app: Inference payload DataFrame:
+    CHAS     RM    TAX  PTRATIO      B  LSTAT
+0     0  6.575  296.0     15.3  396.9   4.98
+[2020-02-16 12:59:57,188] INFO in app: Scaling Payload :
+    CHAS     RM    TAX  PTRATIO      B  LSTAT
+0     0  6.575  296.0     15.3  396.9   4.98
+[2020-02-16 12:59:57,199] INFO in app: Housing Price Prediction output:
+ [20.35373177134412]
+127.0.0.1 - - [16/Feb/2020 12:59:57] "POST /predict HTTP/1.1" 200 -
+[2020-02-16 13:00:04,854] INFO in app: JSON payload:
+ {'CHAS': {'0': 0}, 'RM': {'0': 6.575}, 'TAX': {'0': 296.0}, 'PTRATIO': {'0': 15.3}, 'B': {'0': 396.9}, 'LSTAT': {'0': 4.98}}
+[2020-02-16 13:00:04,856] INFO in app: Inference payload DataFrame:
+    CHAS     RM    TAX  PTRATIO      B  LSTAT
+0     0  6.575  296.0     15.3  396.9   4.98
+[2020-02-16 13:00:04,867] INFO in app: Scaling Payload :
+    CHAS     RM    TAX  PTRATIO      B  LSTAT
+0     0  6.575  296.0     15.3  396.9   4.98
+[2020-02-16 13:00:04,879] INFO in app: Housing Price Prediction output:
+ [20.35373177134412]
+127.0.0.1 - - [16/Feb/2020 13:00:04] "POST /predict HTTP/1.1" 200 -
+[2020-02-16 13:08:09,710] INFO in app: JSON payload:
+ {'CHAS': {'0': 0}, 'RM': {'0': 6.575}, 'TAX': {'0': 296.0}, 'PTRATIO': {'0': 15.3}, 'B': {'0': 396.9}, 'LSTAT': {'0': 4.98}}
+[2020-02-16 13:08:09,712] INFO in app: Inference payload DataFrame:
+    CHAS     RM    TAX  PTRATIO      B  LSTAT
+0     0  6.575  296.0     15.3  396.9   4.98
+[2020-02-16 13:08:09,721] INFO in app: Scaling Payload :
+    CHAS     RM    TAX  PTRATIO      B  LSTAT
+0     0  6.575  296.0     15.3  396.9   4.98
+[2020-02-16 13:08:09,732] INFO in app: Housing Price Prediction output:
+ [20.35373177134412]
+127.0.0.1 - - [16/Feb/2020 13:08:09] "POST /predict HTTP/1.1" 200 -
+
